@@ -1,0 +1,43 @@
+<!Doctype>
+<html ng-app>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	</head>
+<body>
+<div class = "container" ng-controller="AppCtrl">
+	<table class="table">
+		<thead>
+		<tr>
+			<th> Pizza Hut Name </th>
+			<th> Pizza Hut Address</th>
+			<th> Pizza Hut Phone number </th>
+			<th> Action </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> <input class="Form-Control" ng-model = {{Pizza.name}}></td>
+			<td> <input class="Form-Control" ng-model ={{Pizza.address}}></td>
+			<td> <input class="Form-Control" ng-model = {{Pizza.number}}></td>
+			<td> <button class= "btn btn-info" ng-click= update();>Update</button></td>
+			<td> <button class= "btn btn-info" ng-click= Remove();>Remove</button></td>
+
+		</tr>
+		<tr ng-repeat="pizza in pizzalist">
+			
+	        <td> {{Pizza.name}} </td>
+			<td> {{Pizza.address}}</td>
+			<td> {{Pizza.number}} </td>
+
+
+		</tr>
+</tbody>
+
+	</table>
+
+</div>
+
+<!-- <h1>Hello World </h1>
+ --><script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+</body>
+</html>
